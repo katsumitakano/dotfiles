@@ -3,6 +3,7 @@
 
 ;; 日本語環境の設定
 (set-language-environment "Japanese")
+(prefer-coding-system 'utf-8)
 ;; オープニングメッセージの非表示
 (setq inhibit-startup-message t)
 ;; 対応する括弧をハイライト
