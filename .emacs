@@ -14,3 +14,6 @@
 (tool-bar-mode 0)
 ;; カーソルの点滅を止める
 (blink-cursor-mode 0)
+;; 複数行を折り返さない
+(setq-default truncate-partial-width-windows t)
+(setq-default truncate-lines t)
