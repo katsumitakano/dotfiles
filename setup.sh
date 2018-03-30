@@ -1,5 +1,27 @@
-#!/bin/sh
-cd ~
-ln -s dotfiles/.vimrc .vimrc
-ln -s dotfiles/.tmux.conf .tmux.conf
-ln -s dotfiles/.emacs .emacs
+#!/bin/bash
+
+cat << START
+==================================
+DOTFILES SETUP START!!
+==================================
+START
+
+
+# 実行スクリプトのディレクトリを取得
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+cd $SCRIPT_DIR
+
+# .から始まる2文字以上のファイルを列挙
+for f in .??*; do
+	[ "$f" = ".git" ] && continue
+
+	ln -sf $SCRIPT_DIR/$f ~/$f
+	echo "linked $f"
+done
+
+
+cat << END
+==================================
+DOTFILES SETUP FINISHED!!
+==================================
+END
