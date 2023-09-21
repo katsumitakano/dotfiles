@@ -15,7 +15,7 @@ cd $SCRIPT_DIR
 
 # .から始まる2文字以上のファイルを列挙
 for f in .??*; do
-	[ "$f" = ".git" ] && continue
+	[ "$f" = ".git" -o "$f" = ".gitignore" ] && continue
 
 	ln -sf $SCRIPT_DIR/$f ~/$f
 	echo "linked $f"
