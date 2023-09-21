@@ -21,6 +21,9 @@ for f in .??*; do
 	echo "linked $f"
 done
 
+# sheldonの設定ファイル配置
+mkdir -p $HOME/.config/sheldon
+ln -sf ./sheldon/plugins.toml $HOME/.config/sheldon/plugins.toml
 
 cat << END
 ==================================

@@ -1,0 +1,43 @@
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+apply = ["source"]
+
+[plugins.compinit]
+inline = 'autoload -Uz compinit && zsh-defer compinit'
+
+[plugins.pure]
+github = "sindresorhus/pure"
+use = ["async.zsh", "pure.zsh"]
+
+# [plugins.spaceship]
+# github = "spaceship-prompt/spaceship-prompt"
+
+[plugins.ohmyzsh-plugins-git]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/git"
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["defer"]
+
+[plugins.dotfiles-defer]
+local = '~/dotfiles/zsh'
+use = ['*.zsh']
+apply = ['defer']
+
+[templates]
+defer = "{{ hooks | get: \"pre\" | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks | get: \"post\" | nl }}"
+
