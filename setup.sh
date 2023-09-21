@@ -6,6 +6,8 @@ DOTFILES SETUP START!!
 ==================================
 START
 
+# Brewfileのインストール実行
+brew bundle
 
 # 実行スクリプトのディレクトリを取得
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
