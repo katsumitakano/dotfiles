@@ -1,21 +1,21 @@
-# Make sure using latest Homebew
-update
-
-# Packages
-install ansible
-install git
-install imagemagick
-install jq
-install lv
-install mysql
-install nkf
-install tree
-install rbenv
-install tmux
-install wget
-install ricty
-install sqlite
-install unrar
-
-# Remove outdated versions
-cleanup
+tap "homebrew/bundle"
+brew "bat"
+brew "gh"
+brew "git"
+brew "jq"
+brew "peco"
+brew "sheldon"
+brew "tig"
+brew "tldr"
+brew "tree"
+brew "volta"
+cask "clipy"
+cask "deepl"
+cask "docker"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "iterm2"
+cask "jetbrains-toolbox"
+cask "notion"
+cask "visual-studio-code"
+cask "zoom"
